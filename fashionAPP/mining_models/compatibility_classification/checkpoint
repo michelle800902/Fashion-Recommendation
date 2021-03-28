@@ -1,0 +1,6 @@
+model_checkpoint_path: "outfit_compatibility_classifier10.ckpt"
+all_model_checkpoint_paths: "outfit_compatibility_classifier6.ckpt"
+all_model_checkpoint_paths: "outfit_compatibility_classifier7.ckpt"
+all_model_checkpoint_paths: "outfit_compatibility_classifier8.ckpt"
+all_model_checkpoint_paths: "outfit_compatibility_classifier9.ckpt"
+all_model_checkpoint_paths: "outfit_compatibility_classifier10.ckpt"

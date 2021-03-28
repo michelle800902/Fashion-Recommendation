@@ -1,0 +1,2 @@
+model_checkpoint_path: "outfit_compatible_classifier.ckpt"
+all_model_checkpoint_paths: "outfit_compatible_classifier.ckpt"

@@ -1,0 +1,150 @@
+/* My CSS */
+
+.menu-price { 
+    opacity: .8;
+}
+
+/**
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600);
+body {
+    font-family: "Source Code Pro", Consolas, monaco, monospace; 
+    line-height: 160%; 
+    font-size: 16px;  
+    margin: 0; 
+}
+path.link {
+    fill: none;
+    stroke-width: 2px;
+}
+.node:not(:hover) .nodetext {
+    display: none;
+}
+h1 { 
+    font-size: 36px; 
+    margin: 10px 0; 
+    text-transform: uppercase; 
+    font-weight: normal;
+}
+h2, h3 { 
+    font-size: 18px; 
+    margin: 5px 0 ; 
+    font-weight: normal;
+}
+header {
+    padding: 20px; 
+    position: absolute; 
+    top: 0; 
+    left: 0;
+}
+a:link { 
+    color: #EE3124; 
+    text-decoration: none;
+}
+a:visited { 
+    color: #EE3124; 
+}
+a:hover { 
+    color: #A4CD39; 
+    text-decoration: underline;
+}
+a:active { 
+    color: #EE3124; 
+}
+.link {
+    stroke: #ccc;
+    stroke-width: 1.5px;
+}
+.node text {
+    pointer-events: none;
+    font: 10px sans-serif;
+}
+
+/* Topic Bubble */
+.circle-overlay {
+    font-size: 16px;
+    border-radius: 50%;
+    position: absolute;
+    overflow: hidden;
+    /*it's buggy with the foreignObject background right now*/
+    /*background-color: rgba(255,255,255,0.5);*/
+}
+.circle-overlay__inner {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+.hidden {
+    display: none;
+}
+.node-icon--faded {
+    opacity: 0.5;
+}
+.legend-size circle {
+    fill: #ccc;
+    /*fill: rgb(31, 119, 180);*/
+}
+
+/* Dropzone */
+#dropzone {
+    /*width: 350px;
+    padding: 10px;*/
+    margin-top: 10px;
+    /*margin-right:10px;
+    float:left;*/
+}
+
+/*#word_cloud {
+    width: 500px;
+    height: 500px;
+    padding: 20px;
+    float:left;
+}*/
+
+/* Loading */
+.loader {
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    margin: 50px auto;
+    position: relative;
+    box-sizing: border-box;
+    text-align: center;
+    z-index: 0;
+    text-transform: uppercase;
+    color: #ccc;
+}
+.loader:before,
+.loader:after {
+    opacity: 0;
+    box-sizing: border-box;
+    content: "\0020";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    border: 0px solid #87CEFF;
+    box-shadow: 0 0 50px #87CEFF, inset 0 0 50px #87CEFF;
+}
+.loader:after {
+    z-index: 1;
+    -webkit-animation: gogoloader 2s infinite 1s;
+}
+.loader:before {
+    z-index: 2;
+    -webkit-animation: gogoloader 2s infinite;
+}
+@-webkit-keyframes gogoloader {
+    0% {
+        -webkit-transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        opacity: 0;
+    }
+}
