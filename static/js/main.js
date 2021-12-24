@@ -24,7 +24,7 @@ $(function() {
         $("#home").backstretch([
             "static/images/home-slideshow1.jpg", 
             "static/images/home-slideshow2.jpg",
-            "static/images/home-slideshow3.jpg"
+            "static/images/home-slideshow3.jpg",
         ], {duration: 2000, fade: 750});
 
         // Submit the query input
@@ -105,7 +105,7 @@ function get_compatibility(input_style, input_category) {
         url: "/get_compatibility/",
         data: {
             input_style: input_style,
-            input_category: input_category
+            input_category: input_category,
         },
         //dataType: "json",
         method: "GET",
@@ -126,7 +126,8 @@ function get_items_data(items) {
     hide_loading();
     // Get item's data from db
     for (let i = 0; i < items.length; i++) {
-        let item_id = items[i].split("-")[1].split(".")[0]; // Split im path to get item id
+        // console.log(items[i].split("/").slice(-1)[0]);
+        let item_id = items[i].split("/").slice(-1)[0].split("-")[1].split(".")[0]; // Split im path to get item id
         
         // Push item image path
         suitable_items.push({
@@ -143,7 +144,7 @@ function get_db_data(index, item_id) {
     $.ajax({
         url: "/get_db_data/", 
         data: { 
-            item_id: item_id  
+            item_id: item_id,
         },
         dataType: "json",
         method: "GET",
@@ -154,7 +155,7 @@ function get_db_data(index, item_id) {
             append_result_html(index, suitable_items[index]);
         },
         error : function (jqXHR, exception) {
-            error_response(jqXHR, exception);s
+            error_response(jqXHR, exception);
         }
     })
 }
